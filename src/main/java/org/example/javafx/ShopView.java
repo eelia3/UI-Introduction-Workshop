@@ -8,18 +8,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class PricingController {
+public class ShopView {
 
     @FXML
-    private void goToShopScene(ActionEvent event) {
+    private void goBack(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("shop-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("pricing-view.fxml"));
             Parent root = loader.load();
             Scene scene = new Scene(root);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setTitle("Shop");
+            stage.setTitle("Pricing Plans");
             stage.show();
 
         } catch (Exception e) {
