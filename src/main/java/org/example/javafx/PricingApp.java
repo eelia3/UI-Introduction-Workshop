@@ -3,6 +3,7 @@ package org.example.javafx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +16,8 @@ public class PricingApp extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Pricing Plans");
         stage.setScene(scene);
-        //TODO: add icon to the stage
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/org/example/javafx/images.png")));
+
         stage.show();
     }
 
